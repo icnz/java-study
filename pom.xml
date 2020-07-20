@@ -35,6 +35,42 @@
             <!-- 依赖应用的范围，如果是正式测试，应该是test阶段 -->
             <scope>compile</scope>
         </dependency>
+        <!-- 日志依赖 start -->
+        <!-- 日志框架，同级别的有commons-logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.30</version>
+        </dependency>
+        <!--  日志实现，同级别的有jdk-logging、log4j、log4j2 -->
+        <!-- logback核心模块 -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <!-- lobback基础模块 -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+            <!-- <scope>test</scope> -->
+        </dependency>
+        <!-- 访问模块与Servlet容器集成提供通过Http来访问日志的功能 -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-access</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <!-- 日志依赖 end -->
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <!--            <scope>provided</scope>-->
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -51,25 +87,25 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.0.0</version>
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>运行基准</id>-->
-<!--                        <phase>integration-test</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>exec</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <classpathScope>test</classpathScope>-->
-<!--                            <executable>java</executable>-->
-<!--                            <arguments>-->
-<!--                                <argument>-classpath</argument>-->
-<!--                                <classpath/>-->
-<!--                                <argument>org.openjdk.jmh.Main</argument>-->
-<!--                                <argument>.*</argument>-->
-<!--                            </arguments>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
-<!--                </executions>-->
+                <!--                <executions>-->
+                <!--                    <execution>-->
+                <!--                        <id>运行基准</id>-->
+                <!--                        <phase>integration-test</phase>-->
+                <!--                        <goals>-->
+                <!--                            <goal>exec</goal>-->
+                <!--                        </goals>-->
+                <!--                        <configuration>-->
+                <!--                            <classpathScope>test</classpathScope>-->
+                <!--                            <executable>java</executable>-->
+                <!--                            <arguments>-->
+                <!--                                <argument>-classpath</argument>-->
+                <!--                                <classpath/>-->
+                <!--                                <argument>org.openjdk.jmh.Main</argument>-->
+                <!--                                <argument>.*</argument>-->
+                <!--                            </arguments>-->
+                <!--                        </configuration>-->
+                <!--                    </execution>-->
+                <!--                </executions>-->
             </plugin>
         </plugins>
     </build>

@@ -16,7 +16,7 @@ import java.util.Date;
  * LocalDateTime         包含日期和时间，比如：2020-10-01 23:12:29
  * Period                时间段
  * ZoneOffset            时区偏移量，比如：+8:00
- * ZoneDateTime          带时区地时间
+ * ZoneDateTime          带时区的时间
  * Clock                 时钟，比如获取目前美国纽约地时间
  * DateTimeFormatter     java.time.format.DateTimeFormatter日期格式化
  */
