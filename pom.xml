@@ -31,7 +31,7 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.1.0</version>
+            <version>7.7.0</version>
             <!-- 依赖应用的范围，如果是正式测试，应该是test阶段 -->
             <scope>compile</scope>
         </dependency>
